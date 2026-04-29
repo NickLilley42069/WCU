@@ -1,15 +1,14 @@
 <?php
-require "../../Includes/RMS-Mockup-HEADER.html";
+require "/Includes/../RMS-Mockup-HEADER.HTML";
 ?>
 <div id="list">
     <ul>
-        <li class="item"><a id="hideLink" href="../RMS-Mockup-StudentRec.html.php" >Overview</a></li>
-        <li class="item"><a id="hideLink" href="../RMS/Options/StudentRec/RMS-Mockup-StuApplication.html.php" >Student Applications</a></li>
-        <li class="item"><a id="hideLink" href="../RMS/Options/StudentRec/RMS-Mockup-StuCurrent.html.php" >Current Students</a></li>
-        <li class="item" id="thatOne"><a id="hideLink" href="../RMS/Options/StudentRec/RMS-Mockup-StuPast.html.php" >Past Students</a></li>
+        <li class="item"><a id="hideLink" href="../RMS-Mockup-StaffRec.html.php" >Overview</a></li>
+        <li class="item"><a id="hideLink" href="../studentRec/RMS-Mockup-StuApplication.html.php" >Student Applications</a></li>
+        <li class="item"><a id="hideLink" href="../studentRec/RMS-Mockup-StuCurrent.html.php" >Current Students</a></li>
+        <li class="item" id="thatOne"><a id="hideLink" href="../studentRec/RMS-Mockup-StuPast.html.php" >Past Students</a></li>
     </ul>
 </div>
-
 <h1>Student Applications</h1>
 
 <!--LIST OF STAFF! -->

@@ -2,4 +2,4 @@ run this in terminal;
 php -S localhost:8000
 
 then click this;
-http://localhost:8000/WUC/RMS/Public/Life/Index/RMS-Mockup-Home.html.php
+http://localhost:8000/WUC/RMS/Public/Index/RMS-Mockup-Home.html.php
