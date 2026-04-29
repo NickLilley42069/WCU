@@ -1,10 +1,10 @@
 <?php
-require "../../../Includes/RMS-Mockup-HEADER.html";
+require "../../Includes/RMS-Mockup-HEADER.html";
 ?>
 <!-- Profile for Staff-->
  Staff
  
 
 <?php
-require "../../../Includes/RMS-Mockup-FOOTER.html";
+require "../../Includes/RMS-Mockup-FOOTER.html";
 ?>
