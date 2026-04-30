@@ -20,13 +20,45 @@ $this->entityConstructor = $entityConstructor;
 
 public function find($field, $value) {
 
-$stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE ' . $field . ' = :value');
-$stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
+    if (is_array($field) && is_array($value)) {
 
-$criteria = ['value' => $value];
-$stmt->execute($criteria);
+        $compoundQueryArray = [];
+        $criteria = [];
 
-return $stmt->fetchAll();
+        foreach ($field as $keyValuePair) {
+
+            array_push($compoundQueryArray, $keyValuePair . " = :" . $keyValuePair);
+            $criteria[$keyValuePair] = $value[array_search($keyValuePair, $field)];
+
+        }
+
+        $compoundQueryArray = implode(' AND ', $compoundQueryArray);
+
+        $sql = "SELECT * FROM " . $this->table . " WHERE " . $compoundQueryArray;
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->setFetchMode(
+            \PDO::FETCH_CLASS,
+            $this->entityClass,
+            $this->entityConstructor
+        );
+
+        $stmt->execute($criteria);
+
+        return $stmt->fetchAll();
+    }
+    else {
+
+    $stmt = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE ' . $field . ' = :value');
+    $stmt->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass, $this->entityConstructor);
+
+    $criteria = ['value' => $value];
+    $stmt->execute($criteria);
+
+    return $stmt->fetchAll();
+    
+    }
 
 }
 

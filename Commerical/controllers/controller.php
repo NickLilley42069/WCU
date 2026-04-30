@@ -43,6 +43,14 @@ class controllerCommercial; {
 
     }
 
+    public function test() {
+
+    echo loadTemplate('../templates/index.html.php', []);
+
+
+    }
+
+
 }
 
 /*
