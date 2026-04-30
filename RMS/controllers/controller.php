@@ -16,7 +16,7 @@ class controllerRMS {
     private $staffTable
     private $studentAssignmentsTable;
     private $studentsTable;
-    private $ticketsTable;
+    private $ticketsTable;                          
     private $timetable
 
 
