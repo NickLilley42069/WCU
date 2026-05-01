@@ -2,4 +2,4 @@ run this in terminal;
 php -S localhost:8000
 
 then click this;
-http://localhost:8000/WUC/Commerical/Public/Life/Website-AtWoodlands.html.php
+http://localhost:8000/Commerical/Public/Life/Website-AtWoodlands.html.php
