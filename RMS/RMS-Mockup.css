@@ -1,0 +1,297 @@
+* {
+margin: 0;
+margin-bottom: 5px;
+font-family: poppins, sans-serif;
+text-align: center;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+#hideLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+}
+#gap {
+height: 1px;
+background-color: #6D5C7C;
+margin: 60px;
+border: none;
+}
+
+header {
+/*I dont know how but we can add it so that the header follows you down the page */
+display: flex;
+justify-content: space-between;
+color: #ffffff;
+background: linear-gradient(to right, #6D5C7C 0%, #90829B 100%);
+box-shadow: 0 2px 5px rgb(0, 0, 3);
+height: 20vh;
+}
+
+.Logo img {
+max-width: 150px; 
+height: auto;
+align-items: center;
+}
+
+
+
+#sideBarNav li:hover {
+  color: #6D5C7C;
+  font-weight: bold;
+  background-color: #F2BBC9;
+}
+
+#menuBtn {
+margin-left: 75px;
+margin-top: 50px;
+color: white;
+border-radius: 4px;
+cursor: pointer;
+}
+
+#sideBarNav {
+position: fixed; 
+top: 0;
+left: -220px;  
+width: 220px;
+height: 100vh;
+background-color: #8A038C;
+padding-top: 20px;
+box-shadow: 2px 0 5px rgb(0, 0, 3);
+}
+
+#sideBarNav li {
+padding: 15px 20px;
+color: white;
+}
+
+.closeBtn {
+background-color: #80748C;
+text-align: right;
+}
+
+.closeBtn button {
+cursor: pointer;
+padding: 10px 15px;
+font-weight: bold;
+color: black;
+background: none;
+font-size: 16px;
+}
+
+#menuBtn:hover, .Login Button:hover, .closeBtn button:hover, .Profile p:hover  {
+color: black;
+padding: 10px;
+background-color: #F2BBC9;
+}
+
+/*Ticket Page */
+#list {
+  background-color: #6D5C7C;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.20);
+}
+
+#list ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 50px;
+}
+
+.item {  
+  justify-content: center;
+  align-items: center;
+  display: flex;  
+  flex: 1;     
+  color: white;
+  height: 100%;
+}
+
+.item:hover {
+  background-color: #8A038C;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.20);
+}
+
+#thatOne {
+  background-color: #8a038c77;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.20);
+}
+
+/* Archive */
+
+#Archive {
+    padding: 10px;
+    width: 475px;
+    border-radius: 20px;
+    background: linear-gradient(to left, #8a038c00, #8a038c45);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#Archive:hover {
+    background: linear-gradient(to right, #8a038c84, #8a038c6c);
+}
+
+.Archived {
+    gap: 25px;
+    margin: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.OpenLink:hover {
+  text-decoration: underline;
+  color: #8A038C;
+  font-weight: bold;
+}
+
+#CabinetCont {
+    padding: 10px;
+    width: 550px;
+    height: 250px;
+    border-radius: 20px;
+    background: linear-gradient(to left, #8a038c00, #8a038c45);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#CabinetCont:hover {
+    background: linear-gradient(to right, #8a038c84, #8a038c6c);
+}
+
+.Cabinet {
+    gap: 25px;
+    margin: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Timetable */
+
+#timetable{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.slot {
+  background-color: #80748c62;
+}
+.slotEnd {
+  background-color: #80748c29;
+}
+.weekDay {
+background-color: #8A038C;
+}
+
+.weekEnd {
+  background-color: #8a038c86;
+}
+
+.Time, .weekDay, .weekEnd, .Date {
+  padding: 15px;
+    color: white;
+font-weight: bold;
+}
+
+.Time, .Date {
+  background-color: #6D5C7C;
+}
+
+/*Records */
+
+#RecOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  margin: 5%;
+  background-color: #80748c9f;
+  box-shadow: 0px 8px 6px -4px rgba(0,0,0,0.41);
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 0%;
+}
+
+.Recoption {
+  background-color: #8a038cb7;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgb(0, 0, 1);
+}
+
+.Recoption:hover {
+  font-weight: bold;
+  background-color: #8A038C;
+}
+
+.List {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 73vh;
+  margin: 5%;
+  background-color: #80748c9f;
+  box-shadow: 0px 8px 6px -4px rgba(0,0,0,0.41);
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+#Selected {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #80748c9f;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+}
+
+#selection {
+font-style: italic;
+}
+
+#btnForList {
+  background-color: #8a038cb7;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgb(0, 0, 1);
+  cursor: pointer;
+}
+
+#btnForList:hover {
+  font-weight: bold;
+  background-color: #8A038C;
+}
+
+.item2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;  
+  flex: 1;     
+  color: white;
+  background-color: #8a038c8e;
+  height: 100%;
+}
+
+.item2:hover  {
+  background-color: #6D5C7C;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.20);
+}
