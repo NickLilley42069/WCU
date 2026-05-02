@@ -5,12 +5,12 @@ require "../Includes/RMS-Mockup-HEADER.html";
 <h1>Cabinet</h1>
 
 <section class="Cabinet">
-    <container id="CabinetCont"><a id="hideLink" href="/RMS/Options/Tickets/RMS-Mockup-PenTicket.html.php"> 
+    <container id="CabinetCont"><a id="hideLink" href="/RMS/public\Options\Tickets\RMS-Mockup-PenTicket.html.php"> 
          <h2>Tickets</h2>
     <p class="OpenLink">Open</p>
     </a></container>
 
-    <container id="CabinetCont"><li><a id="hideLink" href="/RMS/Options/RMS-Mockup-Attendance.html.php">
+    <container id="CabinetCont"><li><a id="hideLink" href="/RMS/public/Options/RMS-Mockup-Attendance.html.php">
          <h2>Attendance Management</h2>
     <p class="OpenLink">Open</p>
     </a></container>

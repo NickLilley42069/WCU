@@ -4,9 +4,9 @@ require "../../Includes/RMS-Mockup-HEADER.html";
 
 <div id="list">
     <ul>
-        <li class="item" id="thatOne"><a id="hideLink" href="/RMS/Options/Tickets/RMS-Mockup-PenTicket.html.php" >Pending Tickets</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/Tickets/RMS-Mockup-OngTick.html.php" >Ongoing Tickets</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/Tickets/RMS-Mockup-CloTick.html.php" >Closed Tickets</a></li>
+        <li class="item"><a id="hideLink" href="/RMS/public/Options/Tickets/RMS-Mockup-PenTicket.html.php" >Pending Tickets</a></li>
+        <li class="item"><a id="hideLink" href="/RMS/public/Options/Tickets/RMS-Mockup-OngTick.html.php" >Ongoing Tickets</a></li>
+        <li class="item" id="thatOne"><a id="hideLink" href="/RMS/public/Options/Tickets/RMS-Mockup-CloTick.html.php" >Closed Tickets</a></li>
     </ul>
 </div>
 
