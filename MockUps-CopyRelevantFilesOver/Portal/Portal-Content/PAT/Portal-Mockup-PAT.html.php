@@ -22,7 +22,7 @@ it makes that page darker/lighter AND when it  -->
         <container class="WidgetSpecific">[DATE]</container>
     </section>
 
-    <section id="widgetPat"><a href="Portal-Mockup-Feedback.html.php" >
+    <section id="widgetPat"><a id="hideLink" href="Portal-Mockup-Feedback.html.php" >
         <p>Feedback from your last appointment;</p>
         <container class="WidgetSpecific">[FEEDBACK]</container>
     </section>

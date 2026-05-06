@@ -1,5 +1,5 @@
 <?php
-require "..\..\Includes\Portal-Mockup-HEADER.html";
+require "../../Includes\Portal-Mockup-HEADER.html";
 ?>
 
 <div id="listForAss">
@@ -15,7 +15,6 @@ it makes that page darker/lighter AND when it  -->
 </div>
 
 <h2 >Your Assignments!</h2>
-
 
 <?php
 require "../../Includes/Portal-Mockup-FOOTER.html";
