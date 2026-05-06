@@ -47,13 +47,13 @@ class controllerCommercial {
 
     echo loadTemplate('../templates/index.html.php', [
         'title' => 'Home',
-            'linkOutput' => '<a href="/"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
         
         ])]);
     }
@@ -61,13 +61,13 @@ class controllerCommercial {
     public function About() {
         echo loadTemplate('../Templates/About/Website-AboutWoodlands.html.php', [
             'title' => 'About Woodlands',
-            'linkOutput' => '<a href="/About"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/About/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -75,13 +75,13 @@ class controllerCommercial {
     public function Awards() {
         echo loadTemplate('../Templates/About/Website-Awards.html.php', [
             'title' => 'Awards',
-            'linkOutput' => '<a href="/Awards"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/About/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -89,13 +89,13 @@ class controllerCommercial {
     public function News() {
         echo loadTemplate('../Templates/About/Website-News.html.php', [
             'title' => 'News',
-            'linkOutput' => '<a href="/News"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/About/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -103,13 +103,13 @@ class controllerCommercial {
     public function Research() {
         echo loadTemplate('../Templates/About/Website-Research.html.php', [
             'title' => 'Research',
-            'linkOutput' => '<a href="/Research"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/About/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -117,13 +117,13 @@ class controllerCommercial {
     public function Services() {
         echo loadTemplate('../Templates/About/Website-Services.html.php', [
             'title' => 'Services',
-            'linkOutput' => '<a href="/Services"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/About/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -131,13 +131,13 @@ class controllerCommercial {
     public function Contact() {
         echo loadTemplate('../Templates/Contact/Website-Contact.html.php', [
             'title' => 'Contact',
-            'linkOutput' => '<a href="/Contact"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Contact/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -145,13 +145,13 @@ class controllerCommercial {
     public function Accommodation() {
         echo loadTemplate('../Templates/Life/Website-Accommodation.html.php',[
             'title' => 'Accommodation',
-            'linkOutput' => '<a href="/Accommodation"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -159,13 +159,13 @@ class controllerCommercial {
     public function AtWoodlands() {
         echo loadTemplate('../Templates/Life/Website-AtWoodlands.html.php',[
             'title' => 'At Woodlands',
-            'linkOutput' => '<a href="/AtWoodLands"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -173,13 +173,13 @@ class controllerCommercial {
     public function OpenDays() {
         echo loadTemplate('../Templates/Life/Website-OpenDays.html.php',[
             'title' => 'Open Days',
-            'linkOutput' => '<a href="/OpenDays"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -187,13 +187,13 @@ class controllerCommercial {
     public function StudentLife() {
         echo loadTemplate('../Templates/Life/Website-Student-Life.html.php',[
             'title' => 'Student Life',
-            'linkOutput' => '<a href="/StudentLife"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -201,13 +201,13 @@ class controllerCommercial {
     public function StudentUnion() {
         echo loadTemplate('../Templates/Life/Website-StudentUnion.html.php',[
             'title' => 'Student Union',
-            'linkOutput' => '<a href="/StudentUnion"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -215,13 +215,13 @@ class controllerCommercial {
     public function Support() {
         echo loadTemplate('../Templates/Life/Webiste-Support.html.php',[
             'title' => 'Support',
-            'linkOutput' => '<a href="/Support"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Life/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -231,13 +231,13 @@ class controllerCommercial {
 
         echo loadTemplate('../Templates/Study/Website-Course.html.php', [
             'title' => 'Courses',
-            'linkOutput' => '<a href="/Course"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Study/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -245,13 +245,13 @@ class controllerCommercial {
     public function Study() {
         echo loadTemplate('../Templates/Study/Website-Study.html.php', [
             'title' => 'Study',
-            'linkOutput' => '<a href="/Study"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Study/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
@@ -261,24 +261,17 @@ class controllerCommercial {
 
         echo loadTemplate('../Templates/Study/Website-Subjects.html.php', [
             'title' => 'Subjects',
-            'linkOutput' => '<a href="/Subjects"></a>',
+            'linkOutput' => $linkOutput,
             'subjectSearch' => '',
 
             'output' => loadTemplate('../Templates/Study/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
-                'loginLinkOutput' => $this->getloginLink(),
-                'managementOutput' => $this->getManagementOutput()
+                'loginLinkOutput' => $loginLinkOutput,
+                'managementOutput' => $managementOutput
 
         ])]);
     }
 
-    private function getManagementOutput(){
-        return '';
-    }
-
-    private function getLoginLink(){
-        return '<a href="/login">Log in</a>';
-    }
 }
 
 /*
