@@ -6,7 +6,7 @@ require '../functions/loadTemplate.php';
 require '../classes/databaseTable.php';
 require '../RMS/controllers/controller.php';
 
-/*
+
 require '../classes/assignment.php';
 require '../classes/attendanceLog.php';
 require '../classes/chatLog.php';
@@ -22,7 +22,7 @@ require '../classes/studentAssignment.php';
 require '../classes/student.php';
 require '../classes/ticket.php';
 require '../classes/timetableSlot.php';
-*/
+
 
 $pdo = new PDO('mysql:host=mysql;dbname=wuc-schema;charset=utf8', 'root', 'root');
 

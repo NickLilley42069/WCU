@@ -40,7 +40,7 @@ class controllerCommercial {
         $this->ticketsTable = $ticketsTable;
         $this->timetable = $timetable;
 
-
+        
     }
 
     public function Home() {
@@ -263,7 +263,7 @@ class controllerCommercial {
             'title' => 'Subjects',
             'linkOutput' => '<a href="/Subjects"></a>',
             'subjectSearch' => '',
-            
+
             'output' => loadTemplate('../Templates/Study/' . ltrim(explode('?', $_SERVER['REQUEST_URI'])[0], '/') . '.html.php', [
 
                 'loginLinkOutput' => $this->getloginLink(),
@@ -285,7 +285,7 @@ class controllerCommercial {
 
     An example of the loadTemplate function in action
 
-        echo loadTemplate('../templates/... .html.php', [
+        echo loadTemplate('../templates/layout.html.php', [
         'title' => 'UON Home',
         'linkOutput' => $linkOutput,
         'subjectSearch' => '',
