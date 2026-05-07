@@ -1,5 +1,5 @@
 <?php
-require "../Includes/RMS-Mockup-HEADER.html";
+require "../templates/RMS-Mockup-HEADER.html";
 ?>
 
 <h1>RMS</h1>
@@ -20,5 +20,5 @@ require "../Includes/RMS-Mockup-HEADER.html";
 </div>
 
 <?php
-require "../Includes/RMS-Mockup-FOOTER.html";
+require "../templates/RMS-Mockup-FOOTER.html";
 ?> 

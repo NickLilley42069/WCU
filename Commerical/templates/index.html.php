@@ -1,5 +1,5 @@
 <?php
-require "../includes/Website-Mockup-HEADER.html";
+require "../templates/Website-Mockup-HEADER.html";
 ?>
 
 
@@ -24,5 +24,5 @@ require "../includes/Website-Mockup-HEADER.html";
 
 <!--To follow what I had proposed in the wireframe, I want to add an image carousel here -->
 <?php
-require "../includes/Website-Mockup-FOOTER.html";
+require "../templates/Website-Mockup-FOOTER.html";
 ?>

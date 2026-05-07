@@ -47,8 +47,9 @@ class controllerCommercial {
 
     public function home() {
 
-    echo loadTemplate(__DIR__ . '/../templates/index.html.php', []);
+    $output = loadTemplate(__DIR__ . '/../templates/index.html.php', []);
 
+    echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['output' => $output]);
 
     }
 

@@ -48,8 +48,9 @@ class controllerRMS {
     public function home() {
 
 
-    echo loadTemplate(__DIR__ . '/../templates/index.html.php', []);
-    
+    $output = loadTemplate(__DIR__ . '/../templates/RMS-Mockup-Home.html.php', []);
+
+    echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Home', 'output' => $output]);    
   
     }
 
