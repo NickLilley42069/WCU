@@ -93,7 +93,17 @@ VALUES (00001226, 'Placeholder', '', 'Contact', '+44 1234', 15);
 
 -- Department Inserts:
 
--- Degree Inserts:
+INSERT INTO departments (department_id, department_name)
+VALUES (0101, "Department of Arts and Humanities")
+INSERT INTO departments (department_id, department_name)
+VALUES ()
+INSERT INTO departments (department_id, department_name)
+VALUES ()
+INSERT INTO departments (department_id, department_name)
+VALUES ()
+INSERT INTO departments (department_id, department_name)
+VALUES ()
+
 
 -- Courses Inserts:
 
