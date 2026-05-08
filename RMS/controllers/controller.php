@@ -21,9 +21,9 @@ class controllerRMS {
     private $timetable;
 
     
-    private const STATUS_LIVE        = 1;
-    private const STATUS_PROVISIONAL = 2;
-    private const STATUS_DORMANT     = 3;
+    private const int STATUS_LIVE        = 1;
+    private const int STATUS_PROVISIONAL = 2;
+    private const int STATUS_DORMANT     = 3;
 
 
     // Main Constructor
