@@ -13,16 +13,17 @@ class controllerRMS {
     private $modulesTable;
     private $personalTutorialsTable;
     private $recordStatusesTable;
-    private $staffTable
+    private $staffTable;
     private $studentAssignmentsTable;
     private $studentsTable;
-    private $ticketsTable;                          
-    private $timetable
+    private $ticketsTable;
+    private $timetable;
+    private $pdo;
 
 
     // Main Constructor
 
-    public function __construct($assignmentsTable, $attendanceTable, $chatlogsTable, $coursesModulesLinkTable, $coursesTable, $emergencyContactsTable, $moduleAssignmentsTable, $modulesTable, $personalTutorialsTable, $recordStatusesTable, $staffTable, $studentAssignmentsTable, $studentsTable, $ticketsTable, $timetable) {
+    public function __construct($assignmentsTable, $attendanceTable, $chatlogsTable, $coursesModulesLinkTable, $coursesTable, $emergencyContactsTable, $moduleAssignmentsTable, $modulesTable, $personalTutorialsTable, $recordStatusesTable, $staffTable, $studentAssignmentsTable, $studentsTable, $ticketsTable, $timetable, $pdo = null) {
 
         $this->assignmentsTable = $assignmentsTable;
         $this->attendanceTable = $attendanceTable;
@@ -39,8 +40,69 @@ class controllerRMS {
         $this->studentsTable = $studentsTable;
         $this->ticketsTable = $ticketsTable;
         $this->timetable = $timetable;
+        $this->pdo = $pdo;
 
+    }
 
+    public function approveEnrolment($studentID, $decision, $offerLetterBlob = null) {
+        if (!$this->studentsTable || !$this->recordStatusesTable) {
+            return false;
+        }
+
+        $students = $this->studentsTable->find('studentID', $studentID);
+        if (empty($students)) {
+            return false;
+        }
+
+        $recordStatus = new \WUC\Entity\recordStatus();
+        $recordStatus->status = $decision === 'accept' ? 'accepted' : 'rejected';
+        $recordStatus->dateAdded = date('Y-m-d H:i:s');
+
+        $statusId = $this->recordStatusesTable->insertRecord(get_object_vars($recordStatus));
+        if (!$statusId) {
+            return false;
+        }
+
+        $this->studentsTable->updateRecord('recordStatus', $statusId, 'studentID', $studentID);
+        if ($offerLetterBlob !== null) {
+            $this->studentsTable->updateRecord('offerLetter', $offerLetterBlob, 'studentID', $studentID);
+        }
+
+        return true;
+    }
+
+    public function approveGrade($studentID, $assignmentID) {
+        if (!$this->studentAssignmentsTable || !$this->assignmentsTable) {
+            return false;
+        }
+
+        $studentAssignments = $this->studentAssignmentsTable->find(['studentID', 'assignmentID'], [$studentID, $assignmentID]);
+        if (empty($studentAssignments)) {
+            return false;
+        }
+
+        $studentAssignment = $studentAssignments[0];
+        $assignments = $this->assignmentsTable->find('assignmentID', $assignmentID);
+        if (empty($assignments)) {
+            return false;
+        }
+
+        $assignment = $assignments[0];
+        if (!is_numeric($studentAssignment->grade) || !is_numeric($assignment->passGrade)) {
+            return false;
+        }
+
+        if ($studentAssignment->grade >= $assignment->passGrade) {
+            $this->studentAssignmentsTable->updateRecordByCriteria(
+                ['dateOfReturn'],
+                [date('Y-m-d')],
+                ['studentID', 'assignmentID'],
+                [$studentID, $assignmentID]
+            );
+            return true;
+        }
+
+        return false;
     }
 
     public function test() {

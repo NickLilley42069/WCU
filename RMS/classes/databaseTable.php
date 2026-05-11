@@ -75,22 +75,42 @@ return $stmt->fetchAll();
 public function insertRecord($record) {
 
     if (empty($this->id)) {
-
-    unset($this->id);
-
+        unset($this->id);
     }
 
     $keys = array_keys($record);
-
     $attributes = implode(', ', $keys);
     $attributesWithColon = implode(', :', $keys);
 
     $query = "INSERT INTO $this->table ($attributes) VALUES (:$attributesWithColon)";
-
     $stmt = $this->pdo->prepare($query);
-
     $stmt->execute($record);
 
+    return $this->pdo->lastInsertId();
+}
+
+public function updateRecordByCriteria(array $attributes, array $values, array $searchAttributes, array $searchValues) {
+    $setClauses = [];
+    $criteria = [];
+
+    foreach ($attributes as $index => $attribute) {
+        $placeholder = ':set_' . $index;
+        $setClauses[] = "$attribute = $placeholder";
+        $criteria[$placeholder] = $values[$index];
+    }
+
+    $whereClauses = [];
+    foreach ($searchAttributes as $index => $searchAttribute) {
+        $placeholder = ':where_' . $index;
+        $whereClauses[] = "$searchAttribute = $placeholder";
+        $criteria[$placeholder] = $searchValues[$index];
+    }
+
+    $sql = "UPDATE $this->table SET " . implode(', ', $setClauses) . " WHERE " . implode(' AND ', $whereClauses);
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute($criteria);
+
+    return 'Record edited';
 }
 
 public function updateRecord($attribute, $value, $searchAttribute, $searchValue) {

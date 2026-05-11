@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Enrolment Approval</title>
+</head>
+<body>
+    <h1>Approve Student Enrolment</h1>
+    <?php if (!empty($message)): ?>
+        <p><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></p>
+    <?php endif; ?>
+    <form action="admin-enrolment.php" method="post" enctype="multipart/form-data">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required><br><br>
+        
+        <label for="decision">Decision:</label>
+        <select id="decision" name="decision" required>
+            <option value="accept">Accept</option>
+            <option value="reject">Reject</option>
+        </select><br><br>
+        
+        <label for="offerLetter">Offer Letter (DOCX):</label>
+        <input type="file" id="offerLetter" name="offerLetter" accept=".docx"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
