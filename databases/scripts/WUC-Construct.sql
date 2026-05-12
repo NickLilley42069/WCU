@@ -81,7 +81,7 @@ USE `wuc-schema`;
 	course_title VARCHAR(40) NOT NULL,
     course_description VARCHAR(255) NOT NULL,
 	department_id INT(4) NOT NULL,
-    award_map LONGBLOB NOT NULL,
+    award_map LONGBLOB NULL,
     PRIMARY KEY (course_id)
     )ENGINE=INNODB;
     
@@ -100,7 +100,7 @@ USE `wuc-schema`;
     CREATE TABLE modules (
     module_id INT(4) NOT NULL,
     module_description VARCHAR(255) NOT NULL,
-    award_map LONGBLOB NOT NULL,
+    award_map LONGBLOB NULL,
     PRIMARY KEY (module_id)
     )ENGINE=INNODB;
 

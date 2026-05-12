@@ -393,3 +393,7 @@ text-align: center;
     width: 1000px;
     height: 500px;
 }
+
+#subjectBox {
+    padding: 1rem 2rem 3rem;
+}

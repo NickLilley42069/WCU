@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title><?= $title?></title>
     <link rel="stylesheet" href="/style/Website-Mockup.css">
+    <link rel="stylesheet" href="/style/subjects.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
