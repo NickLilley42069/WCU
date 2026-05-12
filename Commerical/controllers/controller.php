@@ -127,7 +127,10 @@ public function subjects() {
     $searchTerm = $_GET['searchBar'] ?? null;
 
     if ($searchTerm) {
-        $currentCourses = $this->coursesTable->find("course_title", $searchTerm);
+        $allCoursesFromDb = $this->coursesTable->findAll();
+        $currentCourses = array_filter($allCoursesFromDb, function($course) use ($searchTerm) {
+            return stripos($course->course_title, $searchTerm) !== false;
+        });
     } else {
         $currentCourses = $this->coursesTable->findAll();
     }
@@ -153,7 +156,7 @@ public function subjects() {
             'courseID' => $course->course_id, 
             'courseTitle' => $course->course_title, 
             'courseDescription' => $course->course_description, 
-            'departmentID' => $course->department_id, 
+            'departmentID' => $course->department_id,
             'moduleOutput' => $moduleOutput
         ]));
     }
@@ -163,8 +166,11 @@ public function subjects() {
     // Get all departments
     $departments = $this->departmentsTable->findAll();
     
-    // Reuse $currentCourses instead of querying again
-    $allCourses = $currentCourses;
+    if ($searchTerm) {
+        $allCourses = $currentCourses;  // Search results only
+    } else {
+        $allCourses = $currentCourses;  // All courses
+    }
     
     $output = loadTemplate(__DIR__ . '/../templates/allCourses.html.php', [
         'output' => $courseOutput,
