@@ -9,29 +9,29 @@ require __DIR__ . '/../classes/studentAssignment.php';
 
 $pdo = new PDO('mysql:host=mysql;dbname=wuc-schema;charset=utf8', 'root', 'root');
 
-$assignmentsTable = new \CSY2089\databaseTable($pdo, 'assignments', 'assignmentID', '\WUC\Entity\assignment', []);
-$studentAssignmentsTable = new \CSY2089\databaseTable($pdo, 'student_assignments', ['studentID', 'assignmentID'], '\WUC\Entity\studentAssignment', []);
+$assignments_table = new \CSY2089\databaseTable($pdo, 'assignments', 'assignmentID', '\WUC\Entity\assignment', []);
+$student_assignments_table = new \CSY2089\databaseTable($pdo, 'student_assignments', ['studentID', 'assignmentID'], '\WUC\Entity\studentAssignment', []);
 
 $message = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $studentID = $_POST['studentID'] ?? null;
-    $assignmentID = $_POST['assignmentID'] ?? null;
+    $student_id = $_POST['student_id'] ?? null;
+    $assignment_id = $_POST['assignment_id'] ?? null;
 
-    if ($studentID && $assignmentID) {
-        $studentAssignments = $studentAssignmentsTable->find(['studentID', 'assignmentID'], [$studentID, $assignmentID]);
-        $assignments = $assignmentsTable->find('assignmentID', $assignmentID);
+    if ($student_id && $assignment_id) {
+        $student_assignments = $student_assignments_table->find(['studentID', 'assignmentID'], [$student_id, $assignment_id]);
+        $assignments = $assignments_table->find('assignmentID', $assignment_id);
 
-        if (!empty($studentAssignments) && !empty($assignments)) {
-            $studentAssignment = $studentAssignments[0];
+        if (!empty($student_assignments) && !empty($assignments)) {
+            $student_assignment = $student_assignments[0];
             $assignment = $assignments[0];
 
-            if (is_numeric($studentAssignment->grade) && is_numeric($assignment->passGrade) && $studentAssignment->grade >= $assignment->passGrade) {
-                $studentAssignmentsTable->updateRecordByCriteria(
+            if (is_numeric($student_assignment->grade) && is_numeric($assignment->passGrade) && $student_assignment->grade >= $assignment->passGrade) {
+                $student_assignments_table->updateRecordByCriteria(
                     ['dateOfReturn'],
                     [date('Y-m-d')],
                     ['studentID', 'assignmentID'],
-                    [$studentID, $assignmentID]
+                    [$student_id, $assignment_id]
                 );
                 $message = 'Grade approved.';
             } else {

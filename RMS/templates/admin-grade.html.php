@@ -10,11 +10,11 @@
         <p><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
     <form action="admin-grade.php" method="post">
-        <label for="studentID">Student ID:</label>
-        <input type="text" id="studentID" name="studentID" required><br><br>
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br><br>
         
-        <label for="assignmentID">Assignment ID:</label>
-        <input type="text" id="assignmentID" name="assignmentID" required><br><br>
+        <label for="assignment_id">Assignment ID:</label>
+        <input type="text" id="assignment_id" name="assignment_id" required><br><br>
         
         <input type="submit" value="Approve Grade">
     </form>
