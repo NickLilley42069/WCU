@@ -47,27 +47,29 @@ $controller = new \WUC\controllerCommercial($assignmentsTable, $attendanceTable,
 
 
 
-
 $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 $uri = trim($uri, '/');
 
-// remove index.php if present
 if (str_starts_with($uri, 'index.php/')) {
     $uri = substr($uri, strlen('index.php/'));
 }
 
+
+$publicRoutes = ['login', 'logout'];
+
+/*
+if (!isset($_SESSION['user_id']) && !in_array($uri, $publicRoutes)) {
+    header('Location: /login');
+    exit;
+}
+*/
+
 if ($uri && method_exists($controller, $uri)) {
-
-    $page = $controller->$uri();
-
-    if ($page !== null) {
-        echo $page;
-    }
-
+    $controller->$uri();
+} else {
+    $controller->home();
 }
-else {
-    echo $controller->home();
-}
+
 
 
 

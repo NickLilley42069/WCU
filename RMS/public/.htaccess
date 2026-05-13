@@ -1,4 +1,7 @@
 Options -Indexes
+
+AcceptPathInfo On
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
