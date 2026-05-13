@@ -9,7 +9,7 @@
     <?php if (!empty($message)): ?>
         <p><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
-    <form action="admin-enrolment.php" method="post" enctype="multipart/form-data">
+    <form action="/index.php/adminEnrolment" method="post" enctype="multipart/form-data">
         <label for="student_id">Student ID:</label>
         <input type="text" id="student_id" name="student_id" required><br><br>
         

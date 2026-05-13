@@ -1,7 +1,3 @@
-<?php
-require "../includes/Website-Mockup-HEADER.html";
-?>
-
 <div id="HeaderWebsite">
 <h1>Study at Woodlands University College</h1>
 </div>
@@ -16,6 +12,3 @@ require "../includes/Website-Mockup-HEADER.html";
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam accusamus nostrum cum, dolores assumenda aut quae amet ad maiores facilis sunt, magni eligendi recusandae quis quod pariatur aliquam. Harum.
 </p>
 </div>
-<?php
-require "../includes/Website-Mockup-FOOTER.html";
-?>

@@ -32,8 +32,6 @@ $chatLogs = [
 $loggedInStaffId = 103;
 ?>
 
-<?php require "../../Includes/RMS-Mockup-HEADER.html"; ?>
-
 <h1>Staff Chat</h1>
 
 <div id="chatWrapper">
@@ -215,4 +213,3 @@ $loggedInStaffId = 103;
     });
 </script>
 
-<?php require "../../Includes/RMS-Mockup-FOOTER.html"; ?>

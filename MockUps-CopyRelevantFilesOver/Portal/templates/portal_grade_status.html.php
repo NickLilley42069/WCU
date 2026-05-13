@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Your Approved Grades</h1>
-    
+
     <?php if ($student_id): ?>
         <?php if (!empty($approved_grades)): ?>
             <table border="1" cellpadding="10" cellspacing="0">
@@ -22,17 +22,17 @@
                 <tbody>
                     <?php foreach ($approved_grades as $item): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($item['assignment']->title ?? 'N/A', ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?php echo htmlspecialchars($item['assignment']->assignment_brief ?? 'N/A', ENT_QUOTES, 'UTF-8'); ?></td>
                             <td><?php echo htmlspecialchars($item['student_assignment']->grade ?? 'N/A', ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?php echo htmlspecialchars($item['assignment']->passGrade ?? 'N/A', ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?php echo htmlspecialchars($item['assignment']->pass_grade ?? 'N/A', ENT_QUOTES, 'UTF-8'); ?></td>
                             <td>
-                                <?php if ($item['student_assignment']->grade >= $item['assignment']->passGrade): ?>
-                                    <span style="color: green;">✓ Passed</span>
+                                <?php if (is_numeric($item['student_assignment']->grade) && is_numeric($item['assignment']->pass_grade) && $item['student_assignment']->grade >= $item['assignment']->pass_grade): ?>
+                                    <span style="color: green;">Passed</span>
                                 <?php else: ?>
-                                    <span style="color: red;">✗ Failed</span>
+                                    <span style="color: red;">Failed</span>
                                 <?php endif; ?>
                             </td>
-                            <td><?php echo htmlspecialchars($item['student_assignment']->dateOfReturn, ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?php echo htmlspecialchars($item['student_assignment']->date_of_return ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

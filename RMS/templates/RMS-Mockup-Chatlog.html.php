@@ -1,8 +1,3 @@
-<?php
-require "../templates/RMS-Mockup-HEADER.html";
-?>
-
-
 <h1>Staff Chat</h1>
 
 <div id="chatWrapper">
@@ -28,5 +23,4 @@ require "../templates/RMS-Mockup-HEADER.html";
 </div>
 
 <?php
-require "../templates/RMS-Mockup-FOOTER.html";
 ?> 

@@ -1,7 +1,3 @@
-<?php
-require "../templates/RMS-Mockup-HEADER.html";
-?>
-
 <h1>RMS</h1>
 
 <div class="Home">
@@ -20,5 +16,4 @@ require "../templates/RMS-Mockup-HEADER.html";
 </div>
 
 <?php
-require "../templates/RMS-Mockup-FOOTER.html";
 ?> 

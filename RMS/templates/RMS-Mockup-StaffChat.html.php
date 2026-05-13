@@ -1,5 +1,3 @@
-<?php require "../../Includes/RMS-Mockup-HEADER.html"; ?>
-
 <h1>Staff Chat</h1>
 
 <div id="chatWrapper">
@@ -69,4 +67,3 @@
     });
 </script>
 
-<?php require "../../Includes/RMS-Mockup-FOOTER.html"; ?>

@@ -1,8 +1,3 @@
-<?php
-require "../includes/Website-Mockup-HEADER.html";
-?>
-
-
 <div id="HeaderWebsite">
 
 <h1>Curious about Woodlands?</h1>
@@ -34,6 +29,3 @@ require "../includes/Website-Mockup-HEADER.html";
 
 <hr id="gap">
 
-<?php
-require "../includes/Website-Mockup-FOOTER.html";
-?>

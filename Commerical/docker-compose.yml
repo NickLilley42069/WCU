@@ -1,10 +1,32 @@
-
 version: "3.9"
 
 services:
   php:
     build: .
     ports:
-      - "3300"
+      - "8080:80"
     volumes:
       - ./:/var/www/html
+    environment:
+      DB_HOST: mysql
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wuc-schema
+    volumes:
+      - ../databases/scripts/WUC-Construct.sql:/docker-entrypoint-initdb.d/01-construct.sql
+      - ../databases/scripts/WUC-Insert.sql:/docker-entrypoint-initdb.d/02-insert.sql
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db_data:

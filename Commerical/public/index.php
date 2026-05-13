@@ -23,7 +23,8 @@ require_once __DIR__ . '/../classes/student.php';
 require_once __DIR__ . '/../classes/ticket.php';
 require_once __DIR__ . '/../classes/timetableSlot.php';
 
-$pdo = new PDO('mysql:host=host.docker.internal;dbname=wuc-schema;charset=utf8', 'root', 'root');
+$host = getenv('DB_HOST') ?: 'host.docker.internal';
+$pdo = new PDO('mysql:host=' . $host . ';dbname=wuc-schema;charset=utf8', 'root', 'root');
 
 $assignmentsTable = new \WUC\databaseTable($pdo, 'assignments', 'assignment_id', 'stdClass', []);
 $attendanceTable = new \WUC\databaseTable($pdo, 'attendance', 'attendance_id', 'stdClass', []);
@@ -37,8 +38,8 @@ $modulesTable = new \WUC\databaseTable($pdo, 'modules', 'module_id', 'stdClass',
 $personalTutorialsTable = new \WUC\databaseTable($pdo, 'personal_tutorials', ['student_id', 'tutor_id'], 'stdClass', []);
 $recordStatusesTable = new \WUC\databaseTable($pdo, 'record_statuses', 'status_id', 'stdClass', []);
 $staffTable = new \WUC\databaseTable($pdo, 'staff', 'staff_id', 'stdClass', []);
-$studentAssignmentsTable = new \WUC\databaseTable($pdo, 'student_assignments', ['student_id', 'assignmentID'], 'stdClass', []);
-$studentsTable = new \WUC\databaseTable($pdo, 'student', 'student_id', 'stdClass', []);
+$studentAssignmentsTable = new \WUC\databaseTable($pdo, 'student_assignments', ['student_id', 'assignment_id'], 'stdClass', []);
+$studentsTable = new \WUC\databaseTable($pdo, 'students', 'student_id', 'stdClass', []);
 $ticketsTable = new \WUC\databaseTable($pdo, 'tickets', 'ticket_id', 'stdClass', []);
 $timetable = new \WUC\databaseTable($pdo, 'timetable', 'timetable_id', 'stdClass', []);
 

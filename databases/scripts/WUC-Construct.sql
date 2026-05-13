@@ -119,7 +119,7 @@ USE `wuc-schema`;
     home_address VARCHAR(40),
     phone_number VARCHAR(20) NOT NULL,
     email VARCHAR(254) NOT NULL,
-    offer_letter LONGBLOB NOT NULL,
+    offer_letter LONGBLOB NULL,
     degree_classification DECIMAL(5,2),
     emergency_contact INT(8) NOT NULL,
     record_status INT(7) NOT NULL,
@@ -183,7 +183,7 @@ USE `wuc-schema`;
     
     CREATE TABLE assignments (
     assignment_id INT(4) NOT NULL AUTO_INCREMENT,
-    assignment_brief LONGBLOB NOT NULL,
+    assignment_brief LONGBLOB NULL,
     pass_grade DECIMAL(5,2) NOT NULL,
     total_marks DECIMAL(5,2) NOT NULL,
     examiner INT(8) NOT NULL,

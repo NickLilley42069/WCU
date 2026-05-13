@@ -26,13 +26,17 @@ border: none;
 }
 
 header {
-/*I dont know how but we can add it so that the header follows you down the page */
 display: flex;
 justify-content: space-between;
+align-items: center;
 color: #ffffff;
 background: linear-gradient(to right, #6D5C7C 0%, #90829B 100%);
 box-shadow: 0 2px 5px rgb(0, 0, 3);
 height: 20vh;
+position: sticky;
+top: 0;
+z-index: 9999;
+overflow: visible;
 }
 
 .Logo img {
@@ -56,8 +60,9 @@ cursor: pointer;
 }
 
 #sideBarNav {
-position: fixed; 
+position: fixed;
 top: 0;
+z-index: 10000;
 width: 220px;
 height: 100vh;
 background-color: #8A038C;

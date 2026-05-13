@@ -1,7 +1,3 @@
-<?php
-require "../Includes/RMS-Mockup-HEADER.html";
-?>
-
 <!-- Information about the course-->
 
 <div class="MainContent">
@@ -44,5 +40,4 @@ the results from what you would choose,
 <label id="btnForList">View</label>
 
 <?php
-require "../Includes/RMS-Mockup-FOOTER.html";
 ?>

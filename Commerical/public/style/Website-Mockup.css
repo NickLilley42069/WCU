@@ -18,9 +18,14 @@ border: none;
 header {
 display: flex;
 justify-content: space-between;
+align-items: center;
 color: #ffffff;
 background: linear-gradient(to right, #6D5C7C 0%, #90829B 100%);
 box-shadow: 0 2px 5px rgb(0, 0, 3);
+position: sticky;
+top: 0;
+z-index: 9999;
+overflow: visible;
 }
 
 .Logo img {
@@ -90,11 +95,18 @@ padding: 30px
     cursor: pointer;
 }
 
+.dropdown {
+    position: relative;
+}
+
 /* Dropdown menu hidden by default */
 .dropdown-content {
     display: none;
     position: absolute;
-    right: auto;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 9999;
     background-color: #80748C;
     flex-direction: column;
 }
@@ -268,9 +280,10 @@ padding: 10px;
 border-radius: 4px;
 }
 
-.MainContent img { /*THERE IS AN ISSUE HERE WHERE YOU CAN NOT ACCESS OPEN DAY IN DROPDOWN MENU */
-width: 1550px;
+.MainContent img {
+width: 100%;
 height: 400px;
+object-fit: cover;
 }
 
 .MainContentH {

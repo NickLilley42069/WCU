@@ -1,7 +1,3 @@
-<?php
-require "../includes/Website-Mockup-HEADER.html";
-?>
-
 <hr id="gap">
 <div class="MainContent">
 <img src="https://picsum.photos/536/364" alt="">
@@ -15,6 +11,3 @@ require "../includes/Website-Mockup-HEADER.html";
 </p>
 </div>
 
-<?php
-require "../includes/Website-Mockup-FOOTER.html";
-?>

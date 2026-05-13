@@ -1,7 +1,3 @@
-<?php
-require "../Includes/RMS-Mockup-HEADER.html";
-?>
-
 <h1>Timetable</h1>
 
 <table id="timetable">
@@ -129,5 +125,4 @@ require "../Includes/RMS-Mockup-HEADER.html";
 
 
 <?php
-require "../Includes/RMS-Mockup-FOOTER.html";
 ?>

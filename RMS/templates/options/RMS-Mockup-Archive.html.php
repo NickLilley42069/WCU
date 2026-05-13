@@ -1,7 +1,3 @@
-<?php
-require "../Includes/RMS-Mockup-HEADER.html";
-?>
-
 <h1>Archive</h1>
 
 <!--A filter for certain fields-->
@@ -164,5 +160,4 @@ require "../Includes/RMS-Mockup-HEADER.html";
 
 </section>
 <?php
-require "../Includes/RMS-Mockup-FOOTER.html";
 ?>

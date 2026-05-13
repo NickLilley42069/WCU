@@ -176,6 +176,71 @@ public function subjects() {
     echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Subjects', 'output' => $output]);
 }
 
+    public function study() {
+        $output = loadTemplate(__DIR__ . '/../templates/study/Website-Study.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Study', 'output' => $output]);
+    }
+
+    public function atWoodlands() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-AtWoodlands.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => "At Woodland's", 'output' => $output]);
+    }
+
+    public function studentLife() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-Student Life.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Student Life', 'output' => $output]);
+    }
+
+    public function accommodation() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-Accomodation.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Accommodation', 'output' => $output]);
+    }
+
+    public function support() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-Support.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Support', 'output' => $output]);
+    }
+
+    public function studentUnion() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-StudentUnion.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Student Union', 'output' => $output]);
+    }
+
+    public function openDays() {
+        $output = loadTemplate(__DIR__ . '/../templates/life/Website-OpenDays.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Open Days', 'output' => $output]);
+    }
+
+    public function aboutWoodlands() {
+        $output = loadTemplate(__DIR__ . '/../templates/about/Website-AboutWoodlands.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => "About Woodland's", 'output' => $output]);
+    }
+
+    public function news() {
+        $output = loadTemplate(__DIR__ . '/../templates/about/Website-News.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'News', 'output' => $output]);
+    }
+
+    public function awards() {
+        $output = loadTemplate(__DIR__ . '/../templates/about/Website-Awards.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Awards', 'output' => $output]);
+    }
+
+    public function services() {
+        $output = loadTemplate(__DIR__ . '/../templates/about/Website-Services.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Services', 'output' => $output]);
+    }
+
+    public function research() {
+        $output = loadTemplate(__DIR__ . '/../templates/about/Website-Research.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Research', 'output' => $output]);
+    }
+
+    public function contact() {
+        $output = loadTemplate(__DIR__ . '/../templates/contact/Website-Contact.html.php', []);
+        echo loadTemplate(__DIR__ . '/../templates/layout.html.php', ['title' => 'Contact', 'output' => $output]);
+    }
+
 /*
 
     An example of the loadTemplate function in action

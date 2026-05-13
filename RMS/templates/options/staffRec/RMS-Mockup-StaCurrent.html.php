@@ -1,12 +1,9 @@
-<?php
-require "../../Includes/RMS-Mockup-HEADER.html";
-?>
 <div id="list">
     <ul>
         <li class="item"><a id="hideLink" href="../RMS-Mockup-StaffRec.html.php" >Overview</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/StaffRec/RMS-Mockup-StaApplication.html.php" >Staff Application</a></li>
-        <li class="item" id="thatOne"><a id="hideLink" href="/RMS/Options/StaffRec/RMS-Mockup-StaCurrent.html.php" >Current Staff</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/StaffRec/RMS-Mockup-StaPast.html.php" >Past Staff</a></li>
+        <li class="item"><a id="hideLink" href="/index.php/staApplication" >Staff Application</a></li>
+        <li class="item" id="thatOne"><a id="hideLink" href="/index.php/staCurrent" >Current Staff</a></li>
+        <li class="item"><a id="hideLink" href="/index.php/staPast" >Past Staff</a></li>
     </ul>
 </div>
 
@@ -24,10 +21,10 @@ require "../../Includes/RMS-Mockup-HEADER.html";
 <!--Options -->
 <section id="RecOptions">
     <div class="Recoption">
-        <a id="hideLink"href="/RMS/Options/StaffRec/RMS-Mockup-StaffProfile.html.php">View Staff</a>
+        <a id="hideLink"href="/index.php/staffProfile">View Staff</a>
     </div>
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/RMS-Mockup-Timetable.html.php">Timetable</a>
+        <a id="hideLink" href="/index.php/timetable">Timetable</a>
     </div>
     <div class="Recoption">
         <a id="hideLink" href="">Contact</a>
@@ -38,5 +35,4 @@ require "../../Includes/RMS-Mockup-HEADER.html";
 </section>
 
 <?php
-require "../../Includes/RMS-Mockup-FOOTER.html";
 ?>

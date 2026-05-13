@@ -1,12 +1,9 @@
-<?php
-require "../../Includes/RMS-Mockup-HEADER.html";
-?>
 <div id="list">
     <ul>
         <li class="item"><a id="hideLink" href="../RMS-Mockup-StudentRec.html.php" >Overview</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-StuApplication.html.php" >Student Applications</a></li>
-        <li class="item"><a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-StuCurrent.html.php" >Current Students</a></li>
-        <li class="item" id="thatOne"><a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-StuPast.html.php" >Past Students</a></li>
+        <li class="item"><a id="hideLink" href="/index.php/stuApplication" >Student Applications</a></li>
+        <li class="item"><a id="hideLink" href="/index.php/stuCurrent" >Current Students</a></li>
+        <li class="item" id="thatOne"><a id="hideLink" href="/index.php/stuPast" >Past Students</a></li>
     </ul>
 </div>
 
@@ -24,19 +21,18 @@ require "../../Includes/RMS-Mockup-HEADER.html";
 <!--Options -->
 <section id="RecOptions">
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-_______.html.php">_____</a> <!--Not sure-->
+        <a id="hideLink" href="#">_____</a> <!--Not sure-->
     </div>
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-_______.html.php">_____</a> <!--Not sure-->
+        <a id="hideLink" href="#">_____</a> <!--Not sure-->
     </div>
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-_______.html.php">_____</a> <!--Not sure-->
+        <a id="hideLink" href="#">_____</a> <!--Not sure-->
     </div>
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/StudentRec/RMS-Mockup-_______.html.php">_____</a> <!--Not sure-->
+        <a id="hideLink" href="#">_____</a> <!--Not sure-->
     </div>
 </section>
 
 <?php
-require "../../Includes/RMS-Mockup-FOOTER.html";
 ?>

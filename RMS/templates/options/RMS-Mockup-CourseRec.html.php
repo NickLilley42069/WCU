@@ -1,7 +1,3 @@
-<?php
-require "../Includes/RMS-Mockup-HEADER.html";
-?>
-
 <h1>Course Overview</h1>
 <!--LIST OF STAFF! -->
 <section class="List">
@@ -15,7 +11,7 @@ require "../Includes/RMS-Mockup-HEADER.html";
 <!--Options -->
 <section id="RecOptions">
     <div class="Recoption">
-        <a id="hideLink" href="/RMS/Options/RMS-Mockup-Course.html.php">View Course</a>
+        <a id="hideLink" href="/index.php/course">View Course</a>
     </div>
     <div class="Recoption">
         <a id="hideLink" href="">View Students</a>
@@ -25,5 +21,4 @@ require "../Includes/RMS-Mockup-HEADER.html";
     </div>
 </section>
 <?php
-require "../Includes/RMS-Mockup-FOOTER.html";
 ?>
