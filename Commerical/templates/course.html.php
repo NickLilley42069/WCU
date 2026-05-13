@@ -17,7 +17,7 @@
     </div>
 
     
-    <form action="/index.php/downloadAwardMap" method="get">
+    <form action="/downloadAwardMap" method="get">
         <input type="hidden" name="course_id" value="<?= $courseID ?>">
         <button type="submit">Download Award Map</button>
     </form>

@@ -47,7 +47,7 @@ class controllerCommercial {
 
     public function login() {
         if (isset($_SESSION['user_id'])) {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -67,7 +67,7 @@ class controllerCommercial {
                         $_SESSION['user_id']   = $user->student_id;
                         $_SESSION['user_name'] = $user->first_name . ' ' . $user->surname;
                         $_SESSION['user_type'] = 'student';
-                        header('Location: /index.php/home');
+                        header('Location: /home');
                         exit;
                     }
                 }
@@ -81,7 +81,7 @@ class controllerCommercial {
 
     public function logout() {
         session_destroy();
-        header('Location: /index.php/home');
+        header('Location: /home');
         exit;
     }
 

@@ -25,7 +25,7 @@
 
     <!-- Student login form -->
     <div id="panel-student">
-      <form method="POST" action="/index.php/login">
+      <form method="POST" action="/login">
         <input type="hidden" name="login_type" value="student">
         <div style="margin-bottom:16px;text-align:left;">
           <label style="display:block;color:#6D5C7C;font-weight:600;font-size:14px;margin-bottom:6px;">Email address</label>
@@ -49,7 +49,7 @@
     <!-- Staff redirect panel -->
     <div id="panel-staff" style="display:none;text-align:center;">
       <p style="color:#80748C;font-size:14px;margin-bottom:20px;">Staff access the RMS portal to manage records and administration.</p>
-      <a href="http://localhost:3300/index.php/login"
+      <a href="http://localhost:3300/login"
          style="display:inline-block;background:#8A038C;color:white;border-radius:8px;padding:13px 28px;font-size:15px;font-weight:600;text-decoration:none;font-family:poppins,sans-serif;">
         Go to Staff Login
       </a>

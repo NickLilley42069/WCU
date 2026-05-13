@@ -11,7 +11,7 @@
       </div>
     <?php endif; ?>
 
-    <form method="POST" action="/index.php/login">
+    <form method="POST" action="/login">
       <div style="margin-bottom:16px;text-align:left;">
         <label style="display:block;color:#6D5C7C;font-weight:600;font-size:14px;margin-bottom:6px;">Email address</label>
         <input type="email" name="email" required
@@ -31,7 +31,7 @@
     </form>
 
     <p style="margin-top:20px;font-size:13px;color:#80748C;">
-      Not a staff member? <a href="http://localhost:8080/index.php/login" style="color:#8A038C;font-weight:600;">Student login</a>
+      Not a staff member? <a href="http://localhost:8080/login" style="color:#8A038C;font-weight:600;">Student login</a>
     </p>
   </div>
 </div>

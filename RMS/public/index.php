@@ -63,7 +63,7 @@ if (str_starts_with($uri, 'index.php/')) {
 $publicRoutes = ['login', 'logout'];
 
 if (!isset($_SESSION['user_id']) && !in_array($uri, $publicRoutes)) {
-    header('Location: /index.php/login');
+    header('Location: /login');
     exit;
 }
 

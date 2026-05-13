@@ -8,7 +8,7 @@
 
     <div id="chatInputBar">
 
-        <form action="/index.php/send" method="POST">
+        <form action="/send" method="POST">
 
             <input type="text" name="message" placeholder="Type a message..." required>
 

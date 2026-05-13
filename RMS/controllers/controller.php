@@ -247,7 +247,7 @@ class controllerRMS {
 
     public function login() {
         if (isset($_SESSION['user_id'])) {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -265,7 +265,7 @@ class controllerRMS {
                     $_SESSION['user_id']   = $user->staff_id;
                     $_SESSION['user_name'] = $user->first_name . ' ' . $user->surname;
                     $_SESSION['user_role'] = $user->role;
-                    header('Location: /index.php/home');
+                    header('Location: /home');
                     exit;
                 }
             }
@@ -278,13 +278,13 @@ class controllerRMS {
 
     public function logout() {
         session_destroy();
-        header('Location: /index.php/login');
+        header('Location: /login');
         exit;
     }
 
     public function manageUsers() {
         if (($_SESSION['user_role'] ?? '') !== 'AD') {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -302,7 +302,7 @@ class controllerRMS {
 
     public function createUser() {
         if (($_SESSION['user_role'] ?? '') !== 'AD') {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -373,7 +373,7 @@ class controllerRMS {
 
     public function editUser() {
         if (($_SESSION['user_role'] ?? '') !== 'AD') {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -435,7 +435,7 @@ class controllerRMS {
 
     public function deleteUser() {
         if (($_SESSION['user_role'] ?? '') !== 'AD') {
-            header('Location: /index.php/home');
+            header('Location: /home');
             exit;
         }
 
@@ -449,16 +449,16 @@ class controllerRMS {
                 } elseif ($type === 'staff' && $id) {
                     $this->staffTable->deleteRecord('staff_id', $id);
                 }
-                header('Location: /index.php/manageUsers?msg=User+deleted.');
+                header('Location: /manageUsers?msg=User+deleted.');
                 exit;
             } catch (\PDOException $e) {
                 $msg = urlencode('Cannot delete: this user is still referenced by other records (assignments, tickets, or chat logs). Remove those links first, or edit the user instead.');
-                header('Location: /index.php/manageUsers?error=' . $msg);
+                header('Location: /manageUsers?error=' . $msg);
                 exit;
             }
         }
 
-        header('Location: /index.php/manageUsers');
+        header('Location: /manageUsers');
         exit;
     }
 
@@ -523,7 +523,7 @@ public function send() {
     }
 
 
-    header('Location: /index.php/chat');
+    header('Location: /chat');
     exit;
 
 }

@@ -1,13 +1,13 @@
 <div style="padding:30px 5%;max-width:700px;margin:0 auto;">
   <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
-    <a href="/index.php/manageUsers" style="color:#8A038C;text-decoration:none;font-size:20px;">&larr;</a>
+    <a href="/manageUsers" style="color:#8A038C;text-decoration:none;font-size:20px;">&larr;</a>
     <h2 style="color:#6D5C7C;font-size:22px;font-weight:700;">Create New User</h2>
   </div>
 
   <?php if ($message): ?>
     <div style="background:#e8f5e9;color:#2e7d32;border-radius:8px;padding:12px 16px;margin-bottom:20px;font-size:14px;">
       <?= htmlspecialchars($message, ENT_QUOTES, 'UTF-8') ?>
-      <a href="/index.php/manageUsers" style="color:#2e7d32;font-weight:600;margin-left:8px;">Back to list</a>
+      <a href="/manageUsers" style="color:#2e7d32;font-weight:600;margin-left:8px;">Back to list</a>
     </div>
   <?php endif; ?>
 
@@ -23,7 +23,7 @@
     </button>
   </div>
 
-  <form method="POST" action="/index.php/createUser">
+  <form method="POST" action="/createUser">
     <input type="hidden" name="type" id="userType" value="student">
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">

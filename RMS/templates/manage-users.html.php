@@ -1,7 +1,7 @@
 <div style="padding:30px 5%;">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
     <h2 style="color:#6D5C7C;font-size:22px;font-weight:700;">Manage Users</h2>
-    <a href="/index.php/createUser"
+    <a href="/createUser"
        style="background:#8A038C;color:white;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">
       + Create User
     </a>
@@ -44,9 +44,9 @@
             <?= $member->password_hash ? 'Yes' : 'No' ?>
           </td>
           <td style="padding:11px 16px;display:flex;gap:8px;">
-            <a href="/index.php/editUser?type=staff&id=<?= $member->staff_id ?>"
+            <a href="/editUser?type=staff&id=<?= $member->staff_id ?>"
                style="background:#6D5C7C;color:white;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;">Edit</a>
-            <form method="POST" action="/index.php/deleteUser" onsubmit="return confirm('Delete this staff member?');" style="margin:0;">
+            <form method="POST" action="/deleteUser" onsubmit="return confirm('Delete this staff member?');" style="margin:0;">
               <input type="hidden" name="type" value="staff">
               <input type="hidden" name="id" value="<?= $member->staff_id ?>">
               <button type="submit" style="background:#8A038C;color:white;padding:6px 14px;border-radius:6px;border:none;font-size:12px;font-weight:600;cursor:pointer;">Delete</button>
@@ -83,9 +83,9 @@
             <?= $student->password_hash ? 'Yes' : 'No' ?>
           </td>
           <td style="padding:11px 16px;display:flex;gap:8px;">
-            <a href="/index.php/editUser?type=student&id=<?= $student->student_id ?>"
+            <a href="/editUser?type=student&id=<?= $student->student_id ?>"
                style="background:#6D5C7C;color:white;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;">Edit</a>
-            <form method="POST" action="/index.php/deleteUser" onsubmit="return confirm('Delete this student?');" style="margin:0;">
+            <form method="POST" action="/deleteUser" onsubmit="return confirm('Delete this student?');" style="margin:0;">
               <input type="hidden" name="type" value="student">
               <input type="hidden" name="id" value="<?= $student->student_id ?>">
               <button type="submit" style="background:#8A038C;color:white;padding:6px 14px;border-radius:6px;border:none;font-size:12px;font-weight:600;cursor:pointer;">Delete</button>

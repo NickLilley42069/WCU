@@ -3,14 +3,14 @@
     <h1>Study at Woodlands University College</h1>
     <p>Discover your subject area and find the course that's right for you</p>
     <div class="search-wrap">
-      <form class="search-inner" action="/index.php/subjects" method="get">
+      <form class="search-inner" action="/subjects" method="get">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b39cc4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" name="searchBar" id="searchBar"
                placeholder="Search for a course..."
                value="<?php echo htmlspecialchars($searchTerm ?? ''); ?>">
         <button type="submit" class="search-btn">Search</button>
         <?php if (!empty($searchTerm)): ?>
-          <a href="/index.php/subjects" class="clear-link">Clear</a>
+          <a href="/subjects" class="clear-link">Clear</a>
         <?php endif; ?>
       </form>
     </div>

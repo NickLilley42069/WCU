@@ -1,6 +1,6 @@
 <div style="padding:30px 5%;max-width:700px;margin:0 auto;">
   <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
-    <a href="/index.php/manageUsers" style="color:#8A038C;text-decoration:none;font-size:20px;">&larr;</a>
+    <a href="/manageUsers" style="color:#8A038C;text-decoration:none;font-size:20px;">&larr;</a>
     <h2 style="color:#6D5C7C;font-size:22px;font-weight:700;">
       Edit <?= ucfirst(htmlspecialchars($type, ENT_QUOTES, 'UTF-8')) ?>
     </h2>
@@ -16,7 +16,7 @@
     <p style="color:#b71c1c;">User not found.</p>
   <?php else: ?>
 
-  <form method="POST" action="/index.php/editUser">
+  <form method="POST" action="/editUser">
     <input type="hidden" name="type" value="<?= htmlspecialchars($type, ENT_QUOTES, 'UTF-8') ?>">
     <input type="hidden" name="id" value="<?= htmlspecialchars($type === 'student' ? $user->student_id : $user->staff_id, ENT_QUOTES, 'UTF-8') ?>">
 

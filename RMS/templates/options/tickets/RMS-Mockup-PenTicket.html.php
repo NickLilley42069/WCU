@@ -1,8 +1,8 @@
 <div id="list">
     <ul>
-        <li class="item" id="thatOne"><a id="hideLink" href="/index.php/pendingTickets" >Pending Tickets</a></li>
-        <li class="item"><a id="hideLink" href="/index.php/ongoingTickets" >Ongoing Tickets</a></li>
-        <li class="item"><a id="hideLink"href="/index.php/closedTickets" >Closed Tickets</a></li>
+        <li class="item" id="thatOne"><a id="hideLink" href="/pendingTickets" >Pending Tickets</a></li>
+        <li class="item"><a id="hideLink" href="/ongoingTickets" >Ongoing Tickets</a></li>
+        <li class="item"><a id="hideLink"href="/closedTickets" >Closed Tickets</a></li>
     </ul>
 </div>
 
